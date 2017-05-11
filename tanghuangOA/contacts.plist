@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>技术部</key>
+	<array>
+		<string>刘森</string>
+		<string>李立京</string>
+		<string>李建</string>
+		<string>王亚龙</string>
+	</array>
+	<key>综合管理部</key>
+	<array>
+		<string>张小超</string>
+		<string>展慧慧</string>
+		<string>左柏玉</string>
+		<string>张宁</string>
+	</array>
+	<key>财务部</key>
+	<array>
+		<string>毕海文</string>
+		<string>王麟喜</string>
+	</array>
+	<key>总经办</key>
+	<array>
+		<string>马总</string>
+		<string>李总</string>
+		<string>王总</string>
+		<string>宋局</string>
+	</array>
+</dict>
+</plist>

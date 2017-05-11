@@ -1,0 +1,19 @@
+//
+//  PCHHeader.pch
+//  
+//
+//  Created by Crab on 2017/5/8.
+//
+//
+
+#ifndef PCHHeader_pch
+#define PCHHeader_pch
+#import "ToolClass.h"
+#import "HTTPDataRequst.h"
+#import "UIView+Extension.h"
+#define SCWIDTH [UIScreen mainScreen].bounds.size.width
+#define SCHEIGHT [UIScreen mainScreen].bounds.size.height
+#define ProportionIPhone6s [UIScreen mainScreen].bounds.size.height/375
+#define BackGrouColor [UIColor colorWithRed:222./255 green:222./255 blue:222./255 alpha:1.0]
+
+#endif /* PCHHeader_pch */
