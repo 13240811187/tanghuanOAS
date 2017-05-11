@@ -12,7 +12,7 @@
 #import "BaseHttpClient.h"
 @interface SetUpTableView ()<UITableViewDataSource,UITableViewDelegate>
 
-
+@property(nonatomic,strong)NSArray * dataArray;
 @end
 @implementation SetUpTableView
 
@@ -30,7 +30,15 @@
         
         [self.headerView addSubview:self.PhoneLabel];
         
+        mineViewController * mine = [[mineViewController alloc] init];
+         mine.MineBlock = ^(NSArray * array){
+            
+            self.dataArray = array;
+            
+        };
+
        
+        
         
     }
     return self;

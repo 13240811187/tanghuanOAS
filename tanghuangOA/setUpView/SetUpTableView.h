@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "mineViewController.h"
 
 @class SetUpTableView;
 @protocol setUpViewDelegate <NSObject>

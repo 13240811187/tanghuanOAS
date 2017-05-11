@@ -16,4 +16,5 @@ typedef enum {
 }CV;
 @interface mineViewController : UIViewController
 
+@property (nonatomic,copy)void(^MineBlock)(NSArray * dataArray);
 @end

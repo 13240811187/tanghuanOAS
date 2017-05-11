@@ -26,15 +26,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
-    button.backgroundColor = [UIColor blueColor];
-    [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+//    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+//    button.backgroundColor = [UIColor blueColor];
+//    [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    [self.view addSubview:button];
     
-    [self.view addSubview:button];
     
+    [self click];
+   //[self requestPerson];
+    [self.view addSubview:self.setUpView];
     
-  // [self requestPerson];
-//    [self.view addSubview:self.setUpView];
     
    
     
@@ -118,14 +120,19 @@
             
            self.mineDataArray  = [mineModel mj_objectArrayWithKeyValuesArray:data[@"data"]];
             
+//            if (self.MineBlock) {
+//                
+//                self.MineBlock(self.mineDataArray);
+//            }
+            
         }
         
-        for (mineModel * model in self.mineDataArray) {
-              NSLog(@"====%ld",(long)model.user_id);
-        }
-        
-        NSLog(@"====%@",data);
-        
+//        for (mineModel * model in self.mineDataArray) {
+//              NSLog(@"====%ld",(long)model.user_id);
+//        }
+//        
+//        NSLog(@"====%@",data);
+//        
 
     }];
 
