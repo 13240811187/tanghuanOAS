@@ -15,7 +15,9 @@
 
 
 
-//请求联系人(同事)列表
-#define CONTACTSURL @""
+//登录请求 api
+#define CONTACTSURL @"http://192.168.1.74/Home/Login/app_login"
+//工资列表 api
+#define WAGE @"http://192.168.1.74/Home/Wage/app_wage"
 
 #endif /* Header_h */
