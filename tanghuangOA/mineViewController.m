@@ -12,11 +12,14 @@
 #import "SetUpTableView.h"
 #import "mineModel.h"
 #import "MJExtension.h"
+#import "wagesDetailsViewController.h"
+#import "MineDetailsView.h"
 @interface mineViewController ()<setUpViewDelegate>
 
 @property(nonatomic,strong)SetUpTableView * setUpView;
 @property(nonatomic,strong)NSDictionary * dataDic;
-@property (nonatomic,strong)NSMutableArray * mineDataArray;
+
+
 
 @end
 
@@ -26,17 +29,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
-//    button.backgroundColor = [UIColor blueColor];
-//    [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
-//    
-//    [self.view addSubview:button];
-    
-    
-    [self click];
-   //[self requestPerson];
-    [self.view addSubview:self.setUpView];
-    
+
+
+    //[self click];
+     [self requestPerson];
+   
+     [self.view addSubview:self.setUpView];
     
    
     
@@ -44,15 +42,18 @@
     
 }
 
-- (NSMutableArray *)mineDataArray{
+-(SetUpTableView *)setUpView{
     
-    if (!_mineDataArray) {
-        _mineDataArray = [[NSMutableArray alloc] init];
-        
+    if (!_setUpView) {
+        _setUpView = [[SetUpTableView alloc] initWithFrame:CGRectMake(0, 0,SCWIDTH,SCHEIGHT-44)];
+        _setUpView.delegate = self;
     }
-    return _mineDataArray;
+    
+    return _setUpView;
+    
     
 }
+
 
 
 
@@ -83,6 +84,7 @@
         
         self.setUpView.PhoneLabel.text = [NSString stringWithFormat:@"%@",self.dataDic[@"gender"]];
         
+        [self.setUpView.tableView reloadData];
         
     } andFailHandler:^(NSError *error) {
         
@@ -95,71 +97,8 @@
 
 
 
-- (void)click{
-    
-    NSMutableDictionary * dic = [[NSMutableDictionary alloc] init];
-    
-    dic[@"id"] = @7;
-    
-    //NSString *url=@"http://192.168.1.74/Home/Person/app_person";
-    NSString *url=@"http://192.168.1.74/Home/Wage/app_wage";
-    
-    
-
-    
-//    NSString *url=@"http://192.168.1.74/Home/Login/app_login";
-    
-    
-    [HTTPDataRequst postYourDataWithUrl:url andData:dic complication:^(id data, NSError *error, NSURLSessionDataTask *task) {
 
 
-        
-        if ([data[@"code"] isEqualToString:@"1"]) {
-            
-            
-            
-           self.mineDataArray  = [mineModel mj_objectArrayWithKeyValuesArray:data[@"data"]];
-            
-//            if (self.MineBlock) {
-//                
-//                self.MineBlock(self.mineDataArray);
-//            }
-            
-        }
-        
-//        for (mineModel * model in self.mineDataArray) {
-//              NSLog(@"====%ld",(long)model.user_id);
-//        }
-//        
-//        NSLog(@"====%@",data);
-//        
-
-    }];
-
-    
-   
-    
-    int a = 100000;
-    
-    CGFloat mo= a/ 1000;
-    
-    NSLog(@"%f",mo);
-    
-
-}
-
-
-- (SetUpTableView *)setUpView{
-    
-    
-    if (!_setUpView) {
-        _setUpView = [[SetUpTableView alloc]initWithFrame:CGRectMake(0, 64,SCWIDTH, 64)];
-        _setUpView.delegate = self;
-        
-    }
-    
-    return _setUpView;
-}
 
 - (void)MySetViewController:(id)sender indexPath:(NSInteger)index{
     
@@ -167,16 +106,8 @@
         case myNewsCV:
         {
             
-//            
-//            DemoVC9 * newCV = [[DemoVC9 alloc] init];
-//            
-//            newCV.isPersonal = YES;
-//            UIBarButtonItem *returnButtonItem = [[UIBarButtonItem alloc] init];
-//            returnButtonItem.title = @"返回";
-//            self.navigationItem.backBarButtonItem=returnButtonItem;
-//            
-//            [self.navigationController pushViewController:newCV animated:YES];
-//            
+            wagesDetailsViewController * wages = [[wagesDetailsViewController alloc] init];
+           [self.navigationController pushViewController:wages animated:YES];
             
             break;
         }

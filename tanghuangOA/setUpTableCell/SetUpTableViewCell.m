@@ -7,7 +7,10 @@
 //
 
 #import "SetUpTableViewCell.h"
+
+
 @interface SetUpTableViewCell()
+
 @property (nonatomic, strong) UILabel * setUpLabel;
 @property (nonatomic, strong) UILabel * versionLabel;
 @property (nonatomic, strong) UIView * bgView;
@@ -32,7 +35,7 @@
           [self.bgView addSubview:self.setImageView];
        
              if (indexPath.row == 0) {
-             self.setUpLabel.text = @"我的消息";
+             self.setUpLabel.text = @"我的工资条";
            
 self.setImageView.image = [UIImage imageNamed:@"mess.png"];
              }else if (indexPath.row ==1){
@@ -59,6 +62,8 @@ self.setImageView.image = [UIImage imageNamed:@"mess.png"];
     }
     return self;
 }
+
+
 
 - (UIImageView *)setImageView{
     

@@ -13,7 +13,7 @@
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 
-
+#import "MJExtension.h"
 
 //登录请求 api
 #define CONTACTSURL @"http://192.168.1.74/Home/Login/app_login"

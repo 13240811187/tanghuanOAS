@@ -8,11 +8,9 @@
 
 #import "SetUpTableView.h"
 #import "SetUpTableViewCell.h"
-#import "mineViewController.h"
-#import "BaseHttpClient.h"
 @interface SetUpTableView ()<UITableViewDataSource,UITableViewDelegate>
 
-@property(nonatomic,strong)NSArray * dataArray;
+
 @end
 @implementation SetUpTableView
 
@@ -30,23 +28,18 @@
         
         [self.headerView addSubview:self.PhoneLabel];
         
-        mineViewController * mine = [[mineViewController alloc] init];
-         mine.MineBlock = ^(NSArray * array){
-            
-            self.dataArray = array;
-            
-        };
 
-       
-        
-        
     }
     return self;
 }
 
+
+
+
+
+
 - (UITableView *)tableView{
-    
-    
+
     if (!_tableView) {
         
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,0, SCWIDTH, SCHEIGHT) style:UITableViewStylePlain];
@@ -143,6 +136,11 @@
         
       cell = [[SetUpTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:giftCellIdentify andIndexPath:indexPath];
     }
+    
+//    mineModel * model = self.dataArray[indexPath.row];
+//    
+//    cell.model = model;
+    
     
     return cell;
 }

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "mineViewController.h"
+
 
 @class SetUpTableView;
 @protocol setUpViewDelegate <NSObject>
@@ -16,6 +16,7 @@
 @end
 @interface SetUpTableView : UIView
 @property (nonatomic, assign)id<setUpViewDelegate>delegate;
+@property (nonatomic,strong)NSMutableArray * dataArray;
 @property (nonatomic,strong)UITableView * tableView;
 @property (nonatomic,strong)UIView * headerView;
 @property (nonatomic,strong)UILabel * userLabel;
