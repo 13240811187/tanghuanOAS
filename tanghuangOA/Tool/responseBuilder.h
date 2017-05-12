@@ -19,7 +19,8 @@ typedef NSInteger ButtonContentType;
 @interface responseBuilder : NSObject
 //普通的button
 + (UIButton*)buttonTitle:(NSString*)title frame:(CGRect)frame backgroundColor:(UIColor*)color target:(id)target selector:(SEL)selector;
-
+//设置圆角边框的BUTTON
++ (UIButton*)radiusbuttonTitle:(NSString*)title frame:(CGRect)frame cornerRadius:(CGFloat)radius borderColor:(UIColor *)bordercolor borderWidth:(CGFloat)borderwidth backgroundColor:(UIColor*)color target:(id)target selector:(SEL)selector;
 //高亮的button
 + (UIButton*)buttonNormalImage:(NSString*)imageName hightLightImage:(NSString*)hightImage frame:(CGRect)frame target:(id)target selector:(SEL)selector;
 

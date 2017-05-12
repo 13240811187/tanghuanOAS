@@ -10,6 +10,7 @@
 #import "XSIdentifiCollectionViewCell.h"
 #import "ButtonClass.h"
 #import "XSLineLayout.h"
+#import "responseBuilder.h"
 #define WI [UIScreen mainScreen].bounds.size.width
 #define HE [UIScreen mainScreen].bounds.size.height
 #define BackGrouColor [UIColor colorWithRed:222./255 green:222./255 blue:222./255 alpha:1.0]
@@ -103,7 +104,17 @@ static NSString *seriesCollectionCellIndentify = @"videoCollectionCellIndentify"
 
     [self.mycollectView registerClass:[XSIdentifiCollectionViewCell class] forCellWithReuseIdentifier:seriesCollectionCellIndentify];
     
+    
+    UIButton * leavebtn = [responseBuilder radiusbuttonTitle:nil frame:CGRectMake(40, self.mycollectView.bottom+40, 80,80) cornerRadius:40 borderColor:[UIColor grayColor] borderWidth:0.1 backgroundColor:[UIColor blackColor] target:self selector:@selector(leavebtnClick)];
+   
+    
+    UIButton * Reimbursement =[responseBuilder radiusbuttonTitle:nil frame:CGRectMake(SCWIDTH-40-80,leavebtn.y, 80,80) cornerRadius:40 borderColor:[UIColor grayColor] borderWidth:0.1 backgroundColor:[UIColor blackColor] target:self selector:@selector(ReimbursementClick)];
+    
+     [self.view addSubview:leavebtn];
+     [self.view addSubview:Reimbursement];
+    
 }
+
 
 
 -(void)buttonClick:(ButtonClass *)sender{
@@ -138,11 +149,15 @@ static NSString *seriesCollectionCellIndentify = @"videoCollectionCellIndentify"
     
     XSIdentifiCollectionViewCell *seriesCell=[collectionView dequeueReusableCellWithReuseIdentifier:seriesCollectionCellIndentify forIndexPath:indexPath];
     
-    if (!seriesCell) {
+    if (indexPath.row==0) {
+        seriesCell.showLabel.text = @"我的申请";
         
-        seriesCell = [[XSIdentifiCollectionViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:seriesCollectionCellIndentify andIndexPath:indexPath];
     }
-  
+    
+    if (indexPath.row==1) {
+        seriesCell.showLabel.text = @"我的审批";
+        
+    }
     
     
     if (!_isFirst) {//第一次进来第一个是1 让其他的变成0.8

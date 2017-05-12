@@ -14,19 +14,7 @@
 @end
 
 @implementation XSIdentifiCollectionViewCell
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier andIndexPath:(NSIndexPath *)indexPath{
-    
-//    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-//    if (self) {
-//        
-//        
-//        
-//    }
-    
-    return self;
-    
-    
-}
+
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -48,6 +36,13 @@
     
     self.contentView.backgroundColor=BackGrouColor;
 
+    self.showLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,0,self.contentView.width, self.contentView.height)];
+    
+    self.showLabel.font = [UIFont systemFontOfSize:24];
+    self.showLabel.textAlignment = NSTextAlignmentCenter;
+    self.showLabel.textColor = [UIColor whiteColor];
+    
+    [self.contentView addSubview:self.showLabel];
    
     
     

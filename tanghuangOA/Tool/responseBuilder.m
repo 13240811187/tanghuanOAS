@@ -21,6 +21,22 @@
     return btn;
 }
 
+
++ (UIButton*)radiusbuttonTitle:(NSString*)title frame:(CGRect)frame cornerRadius:(CGFloat)radius borderColor:(UIColor *)bordercolor borderWidth:(CGFloat)borderwidth backgroundColor:(UIColor*)color target:(id)target selector:(SEL)selector
+{
+    UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame=frame;
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setBackgroundColor:color];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn.layer.cornerRadius = radius;
+    btn.layer.masksToBounds = YES;
+    btn.layer.borderColor =(__bridge CGColorRef _Nullable)(bordercolor);
+    btn.layer.borderWidth =borderwidth;
+    [btn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+    return btn;
+}
+
 + (UIButton*)buttonNormalImage:(NSString*)imageName hightLightImage:(NSString*)hightImage frame:(CGRect)frame target:(id)target selector:(SEL)selector
 {
     UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
