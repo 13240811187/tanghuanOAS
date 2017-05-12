@@ -100,6 +100,7 @@
 		90BF7DC81EBBA3A300C848B4 /* arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 90BF7DC51EBBA3A300C848B4 /* arrow_down.png */; };
 		90BF7DC91EBBA3A300C848B4 /* arrow_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90BF7DC61EBBA3A300C848B4 /* arrow_down@2x.png */; };
 		90BF7DCA1EBBA3A300C848B4 /* arrow_down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90BF7DC71EBBA3A300C848B4 /* arrow_down@3x.png */; };
+		90E9F3921EC550AE004800C8 /* personViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E9F3911EC550AE004800C8 /* personViewController.m */; };
 		A3A50D637E23947E9A9C77A0 /* libPods-tanghuangOA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E8FAB0396C54AB8A4DE220 /* libPods-tanghuangOA.a */; };
 /* End PBXBuildFile section */
 
@@ -262,6 +263,8 @@
 		90BF7DC51EBBA3A300C848B4 /* arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_down.png; sourceTree = "<group>"; };
 		90BF7DC61EBBA3A300C848B4 /* arrow_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_down@2x.png"; sourceTree = "<group>"; };
 		90BF7DC71EBBA3A300C848B4 /* arrow_down@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_down@3x.png"; sourceTree = "<group>"; };
+		90E9F3901EC550AE004800C8 /* personViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = personViewController.h; sourceTree = "<group>"; };
+		90E9F3911EC550AE004800C8 /* personViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = personViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,6 +486,8 @@
 		90BF7D311EBACD8600C848B4 /* contacts */ = {
 			isa = PBXGroup;
 			children = (
+				90E9F3901EC550AE004800C8 /* personViewController.h */,
+				90E9F3911EC550AE004800C8 /* personViewController.m */,
 				90BF7D651EBACFC500C848B4 /* contactsViewController.h */,
 				90BF7D661EBACFC500C848B4 /* contactsViewController.m */,
 				90BF7DBA1EBB99AA00C848B4 /* contactsHeaderView.h */,
@@ -880,6 +885,7 @@
 				715AB89F1EC0161300B2B2EF /* ToolClass.m in Sources */,
 				90BF7DB91EBB1FBF00C848B4 /* UITableViewHeaderFooterView+isExpanded.m in Sources */,
 				71F42DBB1EC3F4CC00388CC1 /* NSObject+MJCoding.m in Sources */,
+				90E9F3921EC550AE004800C8 /* personViewController.m in Sources */,
 				71358B401EC441D800B753C5 /* MineDetailsTableViewCell.m in Sources */,
 				715AB88E1EC0156200B2B2EF /* TouchIDViewController.m in Sources */,
 				71358B4B1EC45E8B00B753C5 /* XSLineLayout.m in Sources */,
